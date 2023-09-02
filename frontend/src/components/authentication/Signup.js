@@ -50,7 +50,7 @@ const Signup = () => {
       });
       return;
     }
-    console.log(name, email, password, pic);
+    // console.log(name, email, password, pic);
     try {
       const config = {
         headers: {
@@ -110,7 +110,7 @@ const Signup = () => {
         .then((res) => res.json())
         .then((data) => {
           setPic(data.url.toString());
-          console.log(data.url.toString());
+          //console.log(data.url.toString());
           setLoading(false);
         })
         .catch((err) => {
@@ -187,7 +187,7 @@ const Signup = () => {
           p={1.5}
           accept="image/*"
           onChange={(e) => postDetails(e.target.files[0])}
-          value={pic}
+          value={""}
         />
       </FormControl>
       <Button
